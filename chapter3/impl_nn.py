@@ -5,6 +5,9 @@ import numpy as np
 import matplotlib.pylab as plt
 import sys
 
+def sigmoid(x):
+    return 1/ (1 + np.exp(-x))
+
 def init_network():
     # ディクショナリ型変数を宣言
     network = {}
