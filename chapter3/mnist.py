@@ -1,3 +1,4 @@
+# 3.6 MNISTを用いた学習
 import urllib.request
 
 url_base = 'http://yann.lecun.com/exdb/mnist/'
