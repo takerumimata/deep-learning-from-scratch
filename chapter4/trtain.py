@@ -27,5 +27,6 @@ def coross_entropy_error(y, t):
     return -np.sum(t * np.log(y)) / batch_size
 
 def numerical_diff(f, x):
+    # 前方差分と中心差分について理解すること: f(x+h) - f(x)の差分は真の微分、真の接戦ではないことに留意する
     h = 1e-4
     return (f(x+h) -f(x-h)) / (2*h)
