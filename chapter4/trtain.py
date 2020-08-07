@@ -1,3 +1,4 @@
+# p.92: ミニバッチ学習
 import sys, os
 sys.path.append(os.pardir)
 import numpy as np
@@ -9,6 +10,7 @@ from dataset.mnist import load_mnist
 print(x_train.shape)
 print(t_train.shape)
 
+# P.93
 train_size = x_train.shape[0]
 batch_size = 10
 batch_mask = np.random.choise(train_size, batch_size)
