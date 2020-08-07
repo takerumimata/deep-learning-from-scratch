@@ -31,6 +31,25 @@ def numerical_diff(f, x):
     h = 1e-4
     return (f(x+h) -f(x-h)) / (2*h)
 
+# 勾配を求める関数
+def numerical_gradient(f, x):
+    # fは関数, xはNumpy配列
+    h = 1e-4
+    grad = np.zeros_like(x)
+
+    for idx in range(x.size):
+        tmp_val = x[idx]
+        # f(x+h)の計算
+        x[idx] = tmp_val + h
+        fxh1 = f(x)
+        
+        # f(x-h)の計算
+        x[idx] = tmp_val - h
+        fxh2 = f(x)
+
+    return grad
+        
+# 勾配降下法
 def gradient_descent(f, init_x, lr=0.01, step_num=100):
     x = x_init
 
